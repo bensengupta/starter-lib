@@ -4,6 +4,7 @@
   "type": "module",
   "version": "1.0.0",
   "license": "UNLICENSED",
+  "main": "dist/main.js",
   "module": "dist/main.mjs",
   "types": "dist/main.d.ts",
   "scripts": {
