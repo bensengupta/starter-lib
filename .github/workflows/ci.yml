@@ -1,4 +1,4 @@
-name: CI Checks
+name: CI
 
 on:
   push:
@@ -10,50 +10,50 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version-file: '.nvmrc'
-        cache: 'yarn'
-    - run: yarn install --frozen-lockfile
-    - run: yarn test
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: yarn test
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version-file: '.nvmrc'
-        cache: 'yarn'
-    - run: yarn install --frozen-lockfile
-    - run: yarn lint
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: yarn lint
   prettier:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version-file: '.nvmrc'
-        cache: 'yarn'
-    - run: yarn install --frozen-lockfile
-    - run: yarn prettier-check
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: yarn prettier-check
   typecheck:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version-file: '.nvmrc'
-        cache: 'yarn'
-    - run: yarn install --frozen-lockfile
-    - run: yarn typecheck
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: yarn typecheck
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version-file: '.nvmrc'
-        cache: 'yarn'
-    - run: yarn install --frozen-lockfile
-    - run: yarn build
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
