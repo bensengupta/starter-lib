@@ -56,3 +56,10 @@ it("should clear timers on unmount", async () => {
 
   expect(timers).toBe(0);
 });
+
+it("should fail test to see output in github actions", () => {
+  const dateStr = new Date().toISOString();
+  renderWithProviders(<TestComponent date={dateStr} />);
+
+  expect(false).toBe(true);
+});
