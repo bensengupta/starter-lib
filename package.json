@@ -10,6 +10,7 @@
     "test": "vitest",
     "lint": "eslint src",
     "build": "rollup -c",
+    "prettier-check": "prettier --check .",
     "typecheck": "tsc"
   },
   "dependencies": {
